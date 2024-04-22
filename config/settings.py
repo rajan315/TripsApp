@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-9ajwe2tw+ko8(t=o-438(%kh3_tl5)sj*i+q(z&3b169^-6i_m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app',' .now.sh']
 
 
 # Application definition
@@ -132,3 +132,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
 LOGIN_REDIRECT_URL = 'trip-list'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
 CRISPY_TEMPLATE_PACK = "tailwind"
+
+STATICFILES_DIRS = os.path.join(BASE_DIR,'static')
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build','static')
